@@ -1,0 +1,144 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+.w3-bar,
+h1,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+.fa-anchor,
+.fa-coffee {
+  font-size: 200px;
+}
+.home {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+.home22 {
+  align: center;
+}
+#pre {
+  margin-left: -50px;
+}
+.topnav {
+  overflow: hidden;
+}
+ul {
+  list-style: none; /* Remove default bullets */
+}
+ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(241, 160, 174); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: black;
+  color: black;
+}
+
+.navbar {
+  overflow: hidden;
+
+  background-color: #e91e63;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.topnav .icon {
+  display: none;
+  background-color: #e91e63;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    background-color: #e91e63;
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    background-color: #e91e63;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    background-color: #e91e63;
+    color: black;
+    display: block;
+    text-align: left;
+  }
+}
+
+.column1 {
+  float: left;
+  width: 30%;
+  padding: 0 30px;
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row1 {
+  margin: 0 10px;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+}

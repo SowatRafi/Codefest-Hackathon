@@ -1,0 +1,92 @@
+html{
+  scroll-behavior: smooth;
+}
+
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+}
+.w3-bar,
+h1,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+.fa-anchor,
+.fa-coffee {
+  font-size: 200px;
+}
+.home {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+.home22 {
+  align: center;
+}
+#pre {
+  margin-left: -50px;
+}
+.topnav {
+  overflow: hidden;
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+	
+  background-color: black;
+  color: black;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #e91e63;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.topnav .icon {
+  display: none;
+  background-color: #e91e63;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+	  background-color: #e91e63;
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+	background-color: #e91e63;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+	background-color: #e91e63;
+	color: black;
+    display: block;
+    text-align: left;
+  }
+}
