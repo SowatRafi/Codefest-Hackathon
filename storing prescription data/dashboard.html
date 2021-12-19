@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Sheba _ CODEFEST Hackathon</title>
+
+    <!--Added Bootstrap 5 CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!--Added Bootstrap 5 JavaScript-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+	</script>
+
+    <link rel="stylesheet" href="style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  </head>
+
+
+
+<body>
+	
+	<!-- add a navbar-->
+
+	<nav class="navbar navbar-expand-md navbar-light bg-light">
+
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="dashboard.html">
+			<img class="d-inline-block align-top" src="images/12.png" alt="Track and Heal" width="300" height="100" >
+		  </a>
+		  <button 
+		  type="button"
+		  data-bs-toggle="collapse"
+		  class="navbar-toggler"
+		  aria-controls="#navbarNav"
+		  aria-expanded="false"
+		  aria-label="Toggle navigation"
+  
+		  >
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+
+			<a class="nav-link active" href="dashboard.html">Collect Information </a>
+		  </div>
+  
+		</div>
+	</nav>
+	<!--Adding a Form to save the data-->
+	<p>Today: <span id="time"> তারিখ / সময়</span></p>
+	<form>
+		<div class="row mb-3">
+		
+			<label for="Date Time" class="col-sm-2 col-form-label">প্রবেশের তারিখ ও সময়:</label>
+			<div class="col-sm-2">
+				<input type="datetime-local" class="form-control" id="Date Time"/>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="Blood Sugar" class="col-sm-2 col-form-label">রক্তে শর্করা</label>
+			<div class="col-sm-2">
+			  <input type="text" class="form-control" id="Blood Sugar" placeholder="জেগে ওঠা (রোজা)">
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="Blood Sugar" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-2">
+			  <input type="text" class="form-control" id="Blood Sugar" placeholder="সকালের নাস্তা
+			  ">
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="Blood Sugar" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-2">
+			  <input type="text" class="form-control" id="Blood Sugar" placeholder="মধ্যাহ্নভোজ">
+			</div>
+		</div>
+
+
+		<div class="row mb-3">
+			<label for="Blood Sugar" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-2">
+			  <input type="text" class="form-control" id="Blood Sugar" placeholder="রাতের খাবার">
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="Blood Sugar" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-2">
+			  <input type="text" class="form-control" id="Blood Sugar" placeholder="শয়নকাল">
+			</div>
+		</div>
+
+		<div class="row mb-3">
+		  <label for="Blood Pressure" class="col-sm-2 col-form-label">রক্তচাপ</label>
+		  <div class="col-sm-2">
+			<input type="text" class="form-control" id="Blood Pressure" placeholder="SYS">
+		  </div>
+		  <div class="col-sm-2">
+			<input type="text" class="form-control" id="Blood Pressure" placeholder="DIA">
+		  </div>
+		</div>
+
+		
+
+		<div class="row mb-3">
+		  <label for="Heart Rate" class="col-sm-2 col-form-label">
+			হৃদ কম্পন</label>
+		  <div class="col-sm-4">
+			<input type="text" class="form-control" id="
+			হৃদ কম্পন">
+		  </div>
+		</div>
+		
+		<div class="row mb-3">
+			<label for="Mood" class="col-sm-2 col-form-label">মেজাজ</label>
+
+			<div class="col-sm-4">
+				<input list="mood" name="mood" class="form-control" />
+				<datalist id="mood">
+					<option value="দারুণ">
+					<option value="ভাল">
+					<option value="খারাপ">
+					<option value="ভয়াবহ">
+				</datalist>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="Oxygen" class="col-sm-2 col-form-label">অক্সিজেন</label>
+			<div class="col-sm-4">
+			  <input type="text" class="form-control" id="Oxygen" placeholder="SpO2">
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="Sleep" class="col-sm-2 col-form-label">
+				ঘুম</label>
+			<div class="col-sm-4">
+			  <input type="text" class="form-control" id="Sleep" placeholder=" ex. 
+			  8 ঘন্টা">
+			</div>
+		</div>
+
+
+		
+		<div class="row mb-3">
+			<label for="sleepquality" class="col-sm-2 col-form-label">ঘুমের মান</label>
+
+			<div class="col-sm-4">
+				<input list="sleepquality" name="sleepquality" class="form-control" />
+				<datalist id="sleepquality">
+					<option value="দারুণ">
+						<option value="ভাল">
+						<option value="খারাপ">
+						<option value="ভয়াবহ">
+				</datalist>
+			</div>
+		</div>	
+
+
+ 
+
+	
+	  	<div class="row mb-3">
+			<label for="activity" class="col-sm-2 col-form-label">কার্যকলাপ</label>
+
+			<div class="col-sm-4">
+				<input list="activity" name="activity" class="form-control" />
+				<datalist id="activity">
+				<option value="কৃষি"></option>
+				<option value="সেবা "></option>
+				<option value="অন্যান্য"></option>
+				</datalist>
+			</div>
+		</div>
+	
+
+
+		<div class="row mb-3">
+			<label for="meditation" class="col-sm-2 col-form-label">আপনি ওষুধ খান</label>
+
+			<div class="col-sm-4">
+				<input list="meditation" name="meditation" class="form-control" />
+				<datalist id="meditation">
+				</datalist>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="meditationtime" class="col-sm-2 col-form-label">কতদিন?</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="meditationtime" >
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="medications" class="col-sm-2 col-form-label">
+				আপনি কি ঔষধ গ্রহণ করেন?</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="medications" placeholder="নাম" >
+			</div>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="medications" placeholder="ডোজ" >
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="medications" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="medications" placeholder="নাম" >
+			</div>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="medications" placeholder="ডোজ" >
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="medications" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="medications" placeholder="নাম" >
+			</div>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="medications" placeholder="ডোজ" >
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			
+			<label for="medication?" class="col-sm-2 col-form-label">
+				আপনি কি আপনার ঔষধ গ্রহণ করেছেন?</label>
+			
+			<div class="col-sm-2">
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" id="medicationCheckYes">
+				<label class="form-check-label" for="medicationCheckYes">
+				  হ্যাঁ
+				</label>
+			  </div>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" id="medicationCheckNO">
+				  <label class="form-check-label" for="medicationCheckNO">
+					
+না
+				  </label>
+				</div>
+			  </div>
+		  </div>
+
+		<div class="row mb-3">
+			
+			<label for="medicationChanges" class="col-sm-2 col-form-label">কোন পরিবর্তন?</label>
+			
+			<div class="col-sm-2">
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" id="medicationChangesYes">
+				<label class="form-check-label" for="medicationChangesYes">
+					হ্যাঁ
+				</label>
+			  </div>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" id="medicationChangesNO">
+				  <label class="form-check-label" for="medicationChangesNO">
+					না
+				  </label>
+				</div>
+			  
+		 	</div>
+		</div> 
+
+		<div class="row mb-3">
+			
+			<label for="Side-Effects" class="col-sm-2 col-form-label">ক্ষতিকর দিক?</label>
+			
+			<div class="col-sm-2">
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" id="Side-EffectsYes">
+				<label class="form-check-label" for="Side-EffectsYes">
+					হ্যাঁ
+				</label>
+			  </div>
+			</div>
+
+			<div class="col-sm-2">
+				<div class="form-check">
+				  <input class="form-check-input" type="checkbox" id="Side-EffectsNO">
+				  <label class="form-check-label" for="Side-EffectsNO">
+					না
+				  </label>
+				</div>
+			  
+		 	</div>
+		</div>
+
+		<div class="row mb-3">
+			<label for="painlevel" class="col-sm-2 col-form-label">সামগ্রিক ব্যথা স্তর</label>
+
+			<div class="col-sm-4">
+				<input list="painlevel" name="painlevel" class="form-control" />
+				<datalist id="painlevel">
+					<option value="দারুণ">
+						<option value="ভাল">
+						<option value="খারাপ">
+						<option value="ভয়াবহ">
+				</datalist>
+			</div>
+		</div>	
+
+		<div class="row mb-3">
+			<label for="journal" class="col-sm-2 col-form-label">মন্তব্য</label>
+			<div class="col-sm-4">
+				<textarea class="form-control" placeholder="মন্তব্য" id="floatingTextarea2" style="height: 100px"></textarea>
+			</div>
+		</div>
+		<div class="row mb-3">
+			<label for="meditationtime" class="col-sm-2 col-form-label">জাতীয় পরিচয়পত্র</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="meditationtime" >
+			</div>
+		</div>
+		<div class="row mb-3">
+			<label for="meditationtime" class="col-sm-2 col-form-label">ব্যবহারকারীর প্রমানপত্র</label>
+			<div class="col-sm-4">
+				<input type="text" class="form-control" id="meditationtime" >
+			</div>
+		</div>
+		<br></br>
+		
+		<button type="submit" class="btn btn-primary">সংরক্ষণ করুন</button>
+
+	</form>
+
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+
+	
+</body>
+
